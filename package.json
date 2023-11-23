@@ -1,0 +1,33 @@
+{
+  "name": "meteor-wallet",
+  "private": true,
+  "scripts": {
+    "start": "npx cross-env MONGO_URL=mongodb://127.0.0.1:27017/meteor-wallet meteor run --settings private/env/dev/settings.json --no-release-check --exclude-archs web.browser.legacy,web.cordova -p 127.0.0.1:3000",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.20.7",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "core-js": "^3.33.3",
+    "meteor-node-stubs": "^1.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "simpl-schema": "^3.4.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}
