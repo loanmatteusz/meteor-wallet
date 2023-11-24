@@ -33,7 +33,6 @@ export const ResetPassword = () => {
             navigate(paths.ACCESS);
         });
     }
-z
 
     return (
         <div className="flex flex-col items-center gap-2">
